@@ -21,32 +21,6 @@ function myFunc() {
   document.getElementById("demo").style.backgroundColor = "white";
 }
 
-//memory for getFibonacci
-var doneFibonacci = false;
-
-//toggle fibonacci sequence
-function getFibonacci() {
-  if (doneFibonacci) {
-	doneFibonacci = false;
-	document.getElementById("demo").innerHTML = "I'm trying to learn how to code in Javascript and HTML.";
-	return;
-  }
-  
-  var i;
-  var prevNum = 1;
-  var curNum = 1;
-  document.getElementById("demo").innerHTML += "<br>";
-  document.getElementById("demo").innerHTML += 1 + "<br>";
-  document.getElementById("demo").innerHTML += 1 + "<br>";
-  for(i = 0; i < 21; i++) {
-    curNum += prevNum;
-	prevNum = curNum - prevNum;
-	document.getElementById("demo").innerHTML += curNum + "<br>";
-  }
-  
-  doneFibonacci = true;
-}
-
 function wait(ms) {
   var d = new Date();
   var d2 = null;
@@ -55,6 +29,8 @@ function wait(ms) {
   } while(d2 - d < ms);
 }
 </script>
+
+<script src="fibonacci.js"></script>
 
 <button type="button" onclick="myFunction()">Click Me!</button>
 <button type="button" onclick="myFunc()">Do not click</button>
