@@ -7,20 +7,24 @@
 <p id="demo">I'm trying to learn how to code in Javascript and HTML.</p>
 
 <script>
+//large text
 function myFunction() {
   document.getElementById("demo").style.fontSize = "25px"; 
   document.getElementById("demo").style.color = "red";
   document.getElementById("demo").style.backgroundColor = "yellow";        
 }
 
+//small text
 function myFunc() {
   document.getElementById("demo").style.fontSize = "10px";
   document.getElementById("demo").style.color = "black";
   document.getElementById("demo").style.backgroundColor = "white";
 }
 
+//memory for getFibonacci
 var doneFibonacci = false;
 
+//toggle fibonacci sequence
 function getFibonacci() {
   if (doneFibonacci) {
 	doneFibonacci = false;
