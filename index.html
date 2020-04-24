@@ -23,6 +23,8 @@ var doneFibonacci = false;
 
 function getFibonacci() {
   if (doneFibonacci) {
+	doneFibonacci = false;
+	document.getElementById("demo").innerHTML = "I'm trying to learn how to code in Javascript and HTML.";
 	return;
   }
   
