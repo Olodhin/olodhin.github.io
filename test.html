@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").style.fontSize = "25px"; 
+  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.backgroundColor = "yellow";        
+}
+
+function myFunc() {
+  document.getElementById("demo").style.fontSize = "10px";
+  document.getElementById("demo").style.color = "black";
+  document.getElementById("demo").style.backgroundColor = "white";
+}
+
+var doneFibonacci = false;
+
+function getFibonacci() {
+  if (doneFibonacci) {
+	return;
+  }
+  
+  var i;
+  var prevNum = 1;
+  var curNum = 1;
+  document.getElementById("demo").innerHTML += "<br>";
+  document.getElementById("demo").innerHTML += 1 + "<br>";
+  document.getElementById("demo").innerHTML += 1 + "<br>";
+  for(i = 0; i < 21; i++) {
+    curNum += prevNum;
+	prevNum = curNum - prevNum;
+	document.getElementById("demo").innerHTML += curNum + "<br>";
+  }
+  
+  doneFibonacci = true;
+}
+
+function wait(ms) {
+  var d = new Date();
+  var d2 = null;
+  do {
+	d2 = new Date();
+  } while(d2 - d < ms);
+}
+</script>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+<button type="button" onclick="myFunc()">Do not click</button>
+<button type="button" onclick="getFibonacci()">Fibonacci</button>
+
+</body>
+</html>
